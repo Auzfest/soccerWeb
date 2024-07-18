@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Website</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <h1>Football League Standings</h1>
+    </header>
+    <nav>
+        <a href="index.html">Standings</a>
+        <a href="fixtures.html">Fixtures</a>
+        <a href="teams.html">Teams</a>
+    </nav>
+    <main id="teamMain">
+        <div id="searchSection">
+        <section class="search">
+            <h3>Search for a team</h3>
+            <p>Click the arrow below to search for a teams in a league.<br>Then click on a team to view their players and statistics.</p>
+            <div id="search-box">
+                <div>
+                    <label for="countries">Select Country</label><br>
+                    <select id="countries" onchange="fetchLeagues()">
+                        <option value="">--Select Country--</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="leagues">Select League</label><br>
+                    <select id="leagues" onchange="setTable()">
+                        <option value="">--Select League--</option>
+                    </select><br>
+                </div>
+            </div>
+        </section>
+        <div id="toggle-button" onclick="toggleSearchBox()">▲</div>
+        <script
+            type="module"
+            src="https://widgets.api-sports.io/2.0.3/widgets.js">
+        </script>
+        </div>
+        <div id="teams" class="teams"></div>
+        <h2 id="squadHeader"></h2>
+        <div id="squad"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Football League Standings</p>
+        <p>Powered by <a href="https://api-sports.io/" target="_blank">API-Sports</a></p>
+    </footer>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/teams.js"></script>
+    <script src="./scripts/theme.js"></script>
+</body>
+</html>
