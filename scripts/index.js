@@ -1,5 +1,5 @@
-const apiKey = 'ba130179camsh650617c22f14e76p172eacjsn0e2c1b317777';
-const apiHost = 'api-football-v1.p.rapidapi.com';
+const apiKey = 'a6b62d37c984b6210b607e0f9c2d2219';
+const apiHost = 'v3.football.api-sports.io';
 
 /**********************
 Search Box Visibility 
@@ -174,7 +174,7 @@ const fetchLeagues = async () => {
 
 async function getTeams(leagueId) {
     // replace season=2023 with season=${updateStandingsSeason(leagueId)} when api is updated
-    const url = `https://${apiHost}/v3/teams?league=${leagueId}&season=2023`;
+    const url = `https://${apiHost}/v3/teams?league=${leagueId}&season=2024`;
     const options = {
     method: 'GET',
     headers: {
@@ -234,7 +234,7 @@ try {
 
 async function getSpecificTeam(leagueId, teamId, teamVenue) {
     // replace season=2023 with season=${updateStandingsSeason(leagueId)}
-    const url = `https://${apiHost}/v3/teams/statistics?season=2023&team=${teamId}&league=${leagueId}`;
+    const url = `https://${apiHost}/v3/teams/statistics?season=2024&team=${teamId}&league=${leagueId}`;
     const options = {
     method: 'GET',
     headers: {
